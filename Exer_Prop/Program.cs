@@ -6,7 +6,7 @@ namespace Exer_Prop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           
         }
     }
 }
