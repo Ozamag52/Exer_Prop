@@ -9,6 +9,8 @@ namespace Exer_Prop.Entities.Class
         public int Quantity { get; set; }
         public double Price { get; set; }
 
+        public Product product { get; set; }
+
 
         public OrderItem()
         {
