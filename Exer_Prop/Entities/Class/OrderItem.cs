@@ -9,7 +9,7 @@ namespace Exer_Prop.Entities.Class
         public int Quantity { get; set; }
         public double Price { get; set; }
 
-        public Product product { get; set; }
+        public Product Product { get; set; }
 
 
         public OrderItem()
@@ -17,10 +17,11 @@ namespace Exer_Prop.Entities.Class
 
         }
 
-        public OrderItem(int quantity, double price)
+        public OrderItem(int quantity, double price, Product product)
         {
             Quantity = quantity;
             Price = price;
+            Product = product;
         }
 
         // Criação do metodo SubTotal
