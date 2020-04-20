@@ -7,8 +7,8 @@ namespace Exer_Prop.Entities.Class
 {
     class Order
     {
-        public DateTime Date { get; set; }
-        public OrderStatus OrderStatus { get; set; }
+        public DateTime Moment { get; set; }
+        public OrderStatus Status { get; set; }
         public Client Client { get; set; }
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
@@ -19,8 +19,8 @@ namespace Exer_Prop.Entities.Class
 
         public Order(DateTime date, OrderStatus orderStatus, Client client)
         {
-            Date = date;
-            OrderStatus = orderStatus;
+            Moment = date;
+            Status = orderStatus;
             Client = client;
 
         }

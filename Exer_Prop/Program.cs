@@ -15,14 +15,14 @@ namespace Exer_Prop
             Console.Write("Birth date (DD/MM/YYYY): ");
             DateTime birthDate = DateTime.Parse(Console.ReadLine());
 
+                Client client = new Client(clientName, email, birthDate);
+
             Console.WriteLine("Enter order data: ");
             Console.Write("Status (PendindPayment / Processing / Shipped / Delivered): ");
             OrderStatus status = Enum.Parse<OrderStatus>(Console.ReadLine());
 
-            Client client = new Client(clientName, email, birthDate);
+                Order order = new Order(DateTime.Now, status, client);
 
-            Order order = new Order(DateTime.Now, status, client);
-/*
             Console.Write("How many items to this order?");
             int qtdItems = int.Parse(Console.ReadLine());
 
@@ -34,11 +34,17 @@ namespace Exer_Prop
                 string productName = Console.ReadLine();
                 Console.Write("Product price: ");
                 double producPrice = double.Parse(Console.ReadLine());
-                Product product = new Product(productName, producPrice);
-                
+                Console.Write("Quantidade: ");
+                int qtd = int.Parse(Console.ReadLine());
+
+                     Product product = new Product(productName, producPrice);
+
+                     OrderItem orderItem = new OrderItem(qtd, producPrice, product);
+
+                order.AddItem(orderItem);
             }
 
-    */
+    
 
         }
     }
