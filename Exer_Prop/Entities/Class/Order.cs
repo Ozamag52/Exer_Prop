@@ -46,5 +46,33 @@ namespace Exer_Prop.Entities.Class
             return sum;
         }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("Order momment :");
+            sb.AppendLine(Moment.ToString("dd/MM/yyyy HH:mm:ss"));
+            sb.Append("Order status: ");
+            sb.AppendLine(Status.ToString());
+            sb.Append("Cliente: ");
+            sb.AppendLine(Client.Name);
+            sb.AppendLine("Order items: ");
+            foreach(OrderItem O in OrderItems)
+            {
+                sb.Append("Produto: ");
+                sb.Append(O.Product.Name);
+                sb.Append(" , ");
+                sb.Append("Price ");
+                sb.Append(O.Price);
+                sb.Append(" , ");
+                sb.Append("Quantity ");
+                sb.Append(O.Quantity);
+                sb.Append(" , ");
+                sb.Append("Subtotal: ");
+                sb.Append(O.SubTotal());
+                sb.AppendLine();
+            }
+            return sb.ToString();
+        }
     }
 }

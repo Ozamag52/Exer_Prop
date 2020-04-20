@@ -43,7 +43,7 @@ namespace Exer_Prop
 
                 order.AddItem(orderItem);
             }
-
+            Console.WriteLine(order);
     
 
         }
